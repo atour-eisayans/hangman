@@ -4,6 +4,6 @@ const app = require('./http.app');
 const httpServer = http.createServer(app);
 
 module.exports = {
-  startHttpServer: httpServer.listen,
-  closeHttpServer: httpServer.close,
+  startHttpServer: httpServer.listen.bind(httpServer),
+  closeHttpServer: httpServer.close.bind(httpServer),
 };

@@ -1,9 +1,10 @@
+const { httpConfigs } = require('./configs');
 const {
   startHttpServer,
   closeHttpServer,
 } = require('./servers');
 
-startHttpServer(3000, () => {
+startHttpServer(httpConfigs.port, () => {
   console.log('http server is running');
 });
 
