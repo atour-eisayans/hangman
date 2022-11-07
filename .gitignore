@@ -1,1 +1,4 @@
 node_modules/
+documents/
+configs/*.config.js
+configs/*.env
