@@ -5,7 +5,7 @@ const {
 } = require('./servers');
 
 startHttpServer(httpConfigs.port, () => {
-  console.log('http server is running');
+  console.log(`http server is running on ${httpConfigs.port}`);
 });
 
 process.on('exit', async () => {

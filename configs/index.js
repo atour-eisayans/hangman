@@ -1,13 +1,11 @@
 const path = require('path');
-const { environments } = require('./enums');
+const getCurrentENV = require('../helpers/getCurrentEnv');
 
-const currentEnvironment = process.env.ENV || environments.development;
-const currentENV = environments[currentEnvironment];
+const currentENV = getCurrentENV();
 
 const envFilePath = path.join(__dirname, `${currentENV}.env`);
-const configFilePath = path.join(__dirname, `${currentENV}.config.js`);
 
 require('dotenv').config({ path: envFilePath });
-const configs = require(configFilePath);
+const configs = require('./config.js');
 
 module.exports = configs;

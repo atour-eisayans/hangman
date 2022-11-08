@@ -1,12 +1,12 @@
 module.exports = {
   environments: {
-    prod: 'prod',
-    production: 'prod',
+    prod: 'production',
+    production: 'production',
     staging: 'staging',
     stage: 'staging',
     test: 'staging',
     testing: 'staging',
-    dev: 'dev',
-    development: 'dev',
+    dev: 'development',
+    development: 'development',
   },
 };
