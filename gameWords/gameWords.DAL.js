@@ -10,6 +10,15 @@ class GameWordsDAL {
       });
     return words;
   }
+
+  async insertAWordToDB(word) {
+    const ids = await gameWordsDBConnection
+      .insert({
+        word,
+      })
+      .returning('word_id');
+    return ids;
+  }
 }
 
 module.exports = new GameWordsDAL();
