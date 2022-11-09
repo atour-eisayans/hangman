@@ -3,3 +3,4 @@ documents/
 configs/config.js
 configs/*.env
 **.http
+**.log
