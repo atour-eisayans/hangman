@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js NODE_ENV=development",
-    "dev-migrate-up": "knex migrate:latest --knexfile configs/knexfile.js --env development",
+    "dev-migrate-up": "knex migrate:latest --migrations-directory ../db/migrations --knexfile configs/knexfile.js --env development",
     "dev-migrate-down": "knex migrate:rollback",
     "dev-migrate-down-all": "knex migrate:rollback --all",
     "dev-create-migration": "knex migrate:make"

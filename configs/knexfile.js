@@ -1,4 +1,4 @@
-// Update with your config settings.
+require('./index');
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
